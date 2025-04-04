@@ -95,13 +95,32 @@ header{
   display: flex;
   height: 14vh;
 }
-img{
+.logo{
   height: 12vh;
   margin: 1vh;
 }
 h1{
   font-family: "Staatliches", sans-serif;
   font-size: 10vh;
+}
+
+.grid{
+  display: grid;
+  grid-template-columns: 1fr 3fr 1fr;
+  grid-template-rows: auto 1fr 10vh;
+}
+
+.crop{
+  grid-area: 1/1/ 2/ -1;
+  height: 45vh;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+}
+
+.schoolImg{
+  height: 150vh;
+  width: auto;
 }
 /* ==========================================================================
    Helper classes
