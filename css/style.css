@@ -104,10 +104,45 @@ h1{
   font-size: 10vh;
 }
 
+html, body{
+  height: 100%;
+}
+
+div.menu{
+  flex: 1;
+  display: flex;
+  overflow: hidden;
+  justify-content: end;
+}
+
+nav{
+  background-color: #f0e746;
+  width: 0;
+  height: 14vh;
+  transition: 1s;
+}
+
+input:checked ~ nav{
+  width: 50vw;
+}
+
+input[type="checkbox"]{
+  appearance: none;
+  -webkit-appearance: none;
+  background-image: url(../img/burger.png);
+  background-size: 70%;
+  background-repeat: no-repeat;
+  background-position: center;
+  width: 14vh;
+  height: 14vh;
+  background-color: #f0e746;
+}
+
 .grid{
   display: grid;
   grid-template-columns: 1fr 3fr 1fr;
   grid-template-rows: auto 1fr 10vh;
+  height: 100%;
 }
 
 .crop{
@@ -119,20 +154,29 @@ h1{
 }
 
 .schoolImg{
-  height: 150vh;
-  width: auto;
+  position: relative;
+  top: -5vh;
+  height: auto;
+  width: 100%;
 }
 
-.menu{
-  
+main{
+  grid-area: 2/2/3/3;
+  background-color: #999;
+}
+
+footer{
+  grid-area: 3/1/4/4;
+  background-color: #999;
+  height: 10vh;
 }
 /* ==========================================================================
-   Helper classes
-   ========================================================================== */
+Helper classes
+========================================================================== */
 
 /*
- * Hide visually and from screen readers
- */
+* Hide visually and from screen readers
+*/
 
 .hidden,
 [hidden] {
