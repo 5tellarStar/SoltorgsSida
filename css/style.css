@@ -91,6 +91,8 @@ textarea {
 
 header{
   background-color: #ffdb00;
+  top: 0;
+  z-index: 100 ;
   position: sticky;
   display: flex;
   height: 14vh;
@@ -162,7 +164,10 @@ input[type="checkbox"]{
 
 main{
   grid-area: 2/2/3/3;
-  background-color: #999;
+}
+
+.mainGrid{
+  grid-template-columns: 1fr 10vw;
 }
 
 footer{
