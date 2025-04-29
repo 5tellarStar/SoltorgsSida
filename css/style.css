@@ -140,10 +140,21 @@ input[type="checkbox"]{
   background-color: #f0e746;
 }
 
-.grid{
+a.menuKnapp{
+  width: 14vh;
+  height: 14vh;
+}
+
+img.menuKnapp{
+ width: 14vh;
+ height: 14vh;
+ padding: 1.75vh;
+}
+
+.homeGrid{
   display: grid;
-  grid-template-columns: 1fr 3fr 1fr;
-  grid-template-rows: auto 1fr 10vh;
+  grid-template-columns: 1fr 2fr 1fr 1fr;
+  grid-template-rows: auto 1fr;
   height: 100%;
 }
 
@@ -162,16 +173,20 @@ input[type="checkbox"]{
   width: 100%;
 }
 
-main{
+.homeGrid main{
   grid-area: 2/2/3/3;
 }
 
-.mainGrid{
-  grid-template-columns: 1fr 10vw;
+main iframe{
+  width: 100%;
+  height: 20vw;
+}
+
+.homeGrid aside{
+  grid-area: 2/3/3/4;
 }
 
 footer{
-  grid-area: 3/1/4/4;
   background-color: #999;
   height: 10vh;
 }
