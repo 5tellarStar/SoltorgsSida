@@ -153,9 +153,10 @@ img.menuKnapp{
 
 .homeGrid{
   display: grid;
-  grid-template-columns: 1fr 2fr 1fr 1fr;
-  grid-template-rows: auto 1fr;
-  height: 100%;
+  grid-template-columns: 1fr 3fr 1fr 1fr;
+  grid-template-rows: auto auto;
+
+
 }
 
 .crop{
@@ -175,21 +176,78 @@ img.menuKnapp{
 
 .homeGrid main{
   grid-area: 2/2/3/3;
+  background-color:gray;
+  border-right: darkgray solid 10px;
+  display: flex;
+  flex-direction: column;
 }
 
-main iframe{
-  width: 100%;
-  height: 20vw;
+.homeGrid main iframe{
+  width: 80%;
+  height: 25vw;
+  align-self: center;
 }
 
 .homeGrid aside{
   grid-area: 2/3/3/4;
+  background-color:gray;
+  display: flex;
+  flex-direction: column;
+  
 }
+
+.homeGrid aside iframe{
+  width: 90%;
+  align-self: center;
+  border-style:groove;
+  
+  border: 10px solid blueviolet;
+}
+
 
 footer{
   background-color: #999;
   height: 10vh;
+  
 }
+
+@media (orientation: portrait) {
+  header{
+    height: 10vh;
+  }
+  .logo{
+  height: 8vh;
+  }
+
+  h1{
+    display: none;
+  }
+
+  nav{
+  height: 10vh;
+}
+
+input:checked ~ nav{
+  width: 50vw;
+}
+
+input[type="checkbox"]{
+  width: 10vh;
+  height: 10vh;
+}
+
+a.menuKnapp{
+  width: 10vh;
+  height: 10vh;
+}
+
+img.menuKnapp{
+ width: 10vh;
+ height: 10vh;
+ padding: 1vh;
+}
+}
+
 /* ==========================================================================
 Helper classes
 ========================================================================== */
